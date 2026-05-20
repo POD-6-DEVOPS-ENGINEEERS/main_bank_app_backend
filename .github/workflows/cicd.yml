@@ -3,7 +3,7 @@ name: Bank Backend Pipeline
 on:
   push:
     branches:
-      - main
+      - main , features/mikky
   # pull_request:
   #   branches:
   #     - cicd
@@ -33,7 +33,7 @@ jobs:
 
     - name: Log in to Amazon ECR
       id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v2
+      uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build Docker image
       working-directory: ./main_bank_app_backend
