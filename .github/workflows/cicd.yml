@@ -3,7 +3,8 @@ name: Bank Backend Pipeline
 on:
   push:
     branches:
-      - main , features/mikky
+      - main
+      - features/mikky
   # pull_request:
   #   branches:
   #     - cicd
