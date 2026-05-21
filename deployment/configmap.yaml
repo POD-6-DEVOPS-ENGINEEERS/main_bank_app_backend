@@ -6,3 +6,12 @@ data:
   DB_HOST: "34.27.23.176"
   DB_PORT: "3306"
   DB_NAME: "online_banking_system"
+
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: bank-backend-config
+# data:
+#   # Use your exact AWS Endpoint and the Initial DB Name you created
+#   SPRING_DATASOURCE_URL: "jdbc:mysql://://amazonaws.com"
+#   SPRING_DATASOURCE_USERNAME: "admin"
