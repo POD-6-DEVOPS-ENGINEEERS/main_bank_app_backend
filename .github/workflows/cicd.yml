@@ -13,10 +13,10 @@ jobs:
   Continues-Integration_build_and_push:
     runs-on: ubuntu-latest
     env:
-      ECR_REGISTRY: 255694842918.dkr.ecr.eu-north-1.amazonaws.com
-      ECR_REPOSITORY: bankapp_backendapi
-      AWS_REGION: eu-north-1
-      IMAGE_TAG: ${{ github.run_number }}
+      ECR_REGISTRY: ${{ vars.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com
+      ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      IMAGE_TAG: ${{ github.run_number }}l
 
       
     
