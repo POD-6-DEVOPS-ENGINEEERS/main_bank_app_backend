@@ -62,36 +62,36 @@ spec:
     spec:
       containers:
       - name: bank-backend-container
-        image: supportcloud160/bank-app-backend:b219162  # Replace this with your Docker image name
+        image: 255694842918.dkr.ecr.eu-north-1.amazonaws.com/bank-backendapi # Replace this with your Docker image name
         ports:
         - containerPort: 8080  # Replace with your app's port if necessary
         env:
-        - name: SPRING_DATASOURCE_URL
+        - name: DB_HOST
           valueFrom:
             configMapKeyRef:
               name: bank-backend-config
-              key: SPRING_DATASOURCE_URL
-        - name: SPRING_DATASOURCE_PORT
+              key: DB_HOST
+        - name: DB_PORT
           valueFrom:
             configMapKeyRef:
               name: bank-backend-config
-              key: SPRING_DATASOURCE_PORT
-        - name: SPRING_DATASOURCE_USERNAME
+              key: DB_PORT
+        - name: DB_USERNAME
           valueFrom:
             configMapKeyRef:
               name: bank-backend-config
-              key: SPRING_DATASOURCE_USERNAME
+              key: DB_USERNAME
               
         # - name: DB_USERNAME
         #   valueFrom:
         #     secretKeyRef:
         #       name: bank-backend-secret
         #       key: DB_USERNAME
-        - name: SPRING_DATASOURCE_PASSWORD
+        - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
               name: bank-backend-secret
-              key: SPRING_DATASOURCE_PASSWORD
+              key: DB_PASSWORD
 
 
 
